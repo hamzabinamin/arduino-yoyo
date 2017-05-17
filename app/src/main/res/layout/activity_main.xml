@@ -1,0 +1,202 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/yoyo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/myResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="45dp"
+        android:text="My Results"
+        android:textSize="20dp"
+        android:textColor="@color/colorRed" />
+
+    <TextView
+        android:id="@+id/myResultsTextView"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/myResults"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="20dp"
+        android:textColor="@color/colorRed"
+        android:background="@drawable/squarebackground" />
+
+    <Button
+        android:id="@+id/clearTableButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/myResultsTextView"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Clear Table"
+        android:textColor="@color/colorBlack"
+        android:background="@color/colorRed"/>
+
+    <FrameLayout
+        android:id="@+id/frameTable"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/rectangletwo"
+        android:layout_below="@id/yoyo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="Place"
+                android:textSize="18dp"
+                android:textColor="@color/colorBlack"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="60dp"
+                android:background="@drawable/verticalthree"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:text="Device Name"
+                android:textSize="18dp"
+                android:textColor="@color/colorBlack"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="60dp"
+                android:background="@drawable/verticalthree"
+                android:layout_weight="1"/>
+
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:text="Time Stamp"
+                android:textSize="18dp"
+                android:textColor="@color/colorBlack"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="60dp"
+                android:background="@drawable/verticalthree"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="Score"
+                android:textSize="18dp"
+                android:textColor="@color/colorBlack"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frameTable">
+    </ListView>
+
+
+
+<!--    <TextView
+        android:id="@+id/testView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtString"
+        android:text=""
+        android:textSize="15sp" />
+-->
+
+    <!--  <Button
+          android:id="@+id/buttonOn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentTop="true"
+          android:text="Button ON" />
+
+      <Button
+          android:id="@+id/buttonOff"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBottom="@+id/buttonOn"
+          android:layout_alignParentRight="true"
+          android:text="Button OFF" />
+      -->
+
+    <!--
+        <TextView
+            android:id="@+id/sensorView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sensorView0"
+            android:layout_centerHorizontal="true"
+            android:text="Sensor 1 Voltage = ????"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/sensorView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sensorView1"
+            android:layout_centerHorizontal="true"
+            android:text="Sensor 2 Voltage = ????"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/sensorView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sensorView2"
+            android:layout_centerHorizontal="true"
+            android:text="Sensor 3 Voltage = ????"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/sensorView0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="196dp"
+            android:text="Sensor 0 Voltage = ????"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    -->
+</RelativeLayout>
